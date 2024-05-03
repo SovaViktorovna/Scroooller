@@ -17,6 +17,7 @@
 		6FC684D82BE48EBE00A60AC2 /* ScrooollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684D72BE48EBE00A60AC2 /* ScrooollerTests.swift */; };
 		6FC684E22BE48EBE00A60AC2 /* ScrooollerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684E12BE48EBE00A60AC2 /* ScrooollerUITests.swift */; };
 		6FC684E42BE48EBE00A60AC2 /* ScrooollerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684E32BE48EBE00A60AC2 /* ScrooollerUITestsLaunchTests.swift */; };
+		6FC684F12BE4A47C00A60AC2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 6FC684F02BE4A47C00A60AC2 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6FC684DD2BE48EBE00A60AC2 /* ScrooollerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrooollerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC684E12BE48EBE00A60AC2 /* ScrooollerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrooollerUITests.swift; sourceTree = "<group>"; };
 		6FC684E32BE48EBE00A60AC2 /* ScrooollerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrooollerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6FC684F02BE4A47C00A60AC2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		6FC684B12BE48EBC00A60AC2 = {
 			isa = PBXGroup;
 			children = (
+				6FC684F02BE4A47C00A60AC2 /* .gitignore */,
 				6FC684BC2BE48EBC00A60AC2 /* Scroooller */,
 				6FC684D62BE48EBE00A60AC2 /* ScrooollerTests */,
 				6FC684E02BE48EBE00A60AC2 /* ScrooollerUITests */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FC684F12BE4A47C00A60AC2 /* .gitignore in Resources */,
 				6FC684CD2BE48EBE00A60AC2 /* LaunchScreen.storyboard in Resources */,
 				6FC684CA2BE48EBE00A60AC2 /* Assets.xcassets in Resources */,
 				6FC684C52BE48EBC00A60AC2 /* Main.storyboard in Resources */,
@@ -452,8 +456,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +466,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.SovaViktorovna.Scroooller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -480,8 +487,9 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,9 +497,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.yandex.practicum.SovaViktorovna.Scroooller;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
