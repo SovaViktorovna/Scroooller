@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F8EA1782BEA5E5D009B3BAB /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EA1772BEA5E5D009B3BAB /* ImagesListCell.swift */; };
 		6FC684BE2BE48EBC00A60AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */; };
 		6FC684C02BE48EBC00A60AC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */; };
-		6FC684C22BE48EBC00A60AC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684C12BE48EBC00A60AC2 /* ViewController.swift */; };
+		6FC684C22BE48EBC00A60AC2 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684C12BE48EBC00A60AC2 /* ImagesListViewController.swift */; };
 		6FC684C52BE48EBC00A60AC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6FC684C32BE48EBC00A60AC2 /* Main.storyboard */; };
 		6FC684C82BE48EBC00A60AC2 /* Scroooller.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684C62BE48EBC00A60AC2 /* Scroooller.xcdatamodeld */; };
 		6FC684CA2BE48EBE00A60AC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6FC684C92BE48EBE00A60AC2 /* Assets.xcassets */; };
@@ -38,10 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F8EA1772BEA5E5D009B3BAB /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
 		6FC684BA2BE48EBC00A60AC2 /* Scroooller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scroooller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6FC684C12BE48EBC00A60AC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6FC684C12BE48EBC00A60AC2 /* ImagesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListViewController.swift; sourceTree = "<group>"; };
 		6FC684C42BE48EBC00A60AC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6FC684C72BE48EBC00A60AC2 /* Scroooller.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Scroooller.xcdatamodel; sourceTree = "<group>"; };
 		6FC684C92BE48EBE00A60AC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F8EA1792BEA5EA6009B3BAB /* ImagesList  */ = {
+			isa = PBXGroup;
+			children = (
+				6F8EA1772BEA5E5D009B3BAB /* ImagesListCell.swift */,
+				6FC684C12BE48EBC00A60AC2 /* ImagesListViewController.swift */,
+			);
+			path = "ImagesList ";
+			sourceTree = "<group>";
+		};
 		6FC684B12BE48EBC00A60AC2 = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +117,7 @@
 			children = (
 				6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */,
 				6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */,
-				6FC684C12BE48EBC00A60AC2 /* ViewController.swift */,
+				6F8EA1792BEA5EA6009B3BAB /* ImagesList  */,
 				6FC684C32BE48EBC00A60AC2 /* Main.storyboard */,
 				6FC684C92BE48EBE00A60AC2 /* Assets.xcassets */,
 				6FC684CB2BE48EBE00A60AC2 /* LaunchScreen.storyboard */,
@@ -265,8 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FC684C22BE48EBC00A60AC2 /* ViewController.swift in Sources */,
+				6FC684C22BE48EBC00A60AC2 /* ImagesListViewController.swift in Sources */,
 				6FC684BE2BE48EBC00A60AC2 /* AppDelegate.swift in Sources */,
+				6F8EA1782BEA5E5D009B3BAB /* ImagesListCell.swift in Sources */,
 				6FC684C02BE48EBC00A60AC2 /* SceneDelegate.swift in Sources */,
 				6FC684C82BE48EBC00A60AC2 /* Scroooller.xcdatamodeld in Sources */,
 			);
