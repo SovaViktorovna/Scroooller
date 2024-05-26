@@ -114,7 +114,7 @@
                     <navigationItem key="navigationItem" id="ubZ-Z1-wOt"/>
                     <connections>
                         <outlet property="tableView" destination="gyB-Rh-UQK" id="2ae-lS-mgk"/>
-                        <segue destination="2XL-42-QpE" kind="show" identifier="ShowSingleImage" id="0yQ-sh-fv6"/>
+                        <segue destination="2XL-42-QpE" kind="presentation" identifier="ShowSingleImage" id="0yQ-sh-fv6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -201,22 +201,39 @@
         <!--Single Image View Controller-->
         <scene sceneID="8mK-RU-pJg">
             <objects>
-                <viewController id="2XL-42-QpE" customClass="SingleImageViewController" customModule="Scroooller" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="2XL-42-QpE" customClass="SingleImageViewController" customModule="Scroooller" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tkt-bC-xjN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="QOf-qg-wot">
-                                <rect key="frame" x="0.0" y="92" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6vK-gu-wfZ" userLabel="Chevron Button">
+                                <rect key="frame" x="8" y="8" width="48" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="QFU-NE-kci"/>
+                                    <constraint firstAttribute="width" constant="48" id="vnG-jG-XaS"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Chevron_Image">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapChevronButton" destination="2XL-42-QpE" eventType="touchUpInside" id="QaZ-2b-prG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VI1-cR-wuF"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstItem="QOf-qg-wot" firstAttribute="top" secondItem="VI1-cR-wuF" secondAttribute="top" id="IB5-cO-GRd"/>
-                            <constraint firstItem="VI1-cR-wuF" firstAttribute="trailing" secondItem="QOf-qg-wot" secondAttribute="trailing" id="IDA-tO-nuy"/>
-                            <constraint firstItem="QOf-qg-wot" firstAttribute="leading" secondItem="VI1-cR-wuF" secondAttribute="leading" id="O1G-um-Q4r"/>
-                            <constraint firstItem="VI1-cR-wuF" firstAttribute="bottom" secondItem="QOf-qg-wot" secondAttribute="bottom" id="cVP-fO-Eq2"/>
+                            <constraint firstItem="6vK-gu-wfZ" firstAttribute="leading" secondItem="VI1-cR-wuF" secondAttribute="leading" constant="8" id="6z0-oi-msz"/>
+                            <constraint firstItem="QOf-qg-wot" firstAttribute="top" secondItem="tkt-bC-xjN" secondAttribute="top" id="IB5-cO-GRd"/>
+                            <constraint firstAttribute="trailing" secondItem="QOf-qg-wot" secondAttribute="trailing" id="IDA-tO-nuy"/>
+                            <constraint firstItem="QOf-qg-wot" firstAttribute="leading" secondItem="tkt-bC-xjN" secondAttribute="leading" id="O1G-um-Q4r"/>
+                            <constraint firstAttribute="bottom" secondItem="QOf-qg-wot" secondAttribute="bottom" id="cVP-fO-Eq2"/>
+                            <constraint firstItem="6vK-gu-wfZ" firstAttribute="top" secondItem="VI1-cR-wuF" secondAttribute="top" constant="8" id="d3n-Rp-t1R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wjo-jH-Cgn"/>
@@ -252,6 +269,7 @@
     </scenes>
     <resources>
         <image name="0" width="1600" height="1059"/>
+        <image name="Chevron_Image" width="9" height="16"/>
         <image name="Exit_Image" width="24" height="24"/>
         <image name="Like_Image_On" width="42" height="42"/>
         <image name="Profile_Foto" width="70" height="70"/>

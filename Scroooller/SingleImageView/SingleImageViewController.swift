@@ -17,6 +17,9 @@ final class SingleImageViewController: UIViewController {
     
     @IBOutlet private var ImageView: UIImageView!
     
+    @IBAction func didTapChevronButton() {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         ImageView.image = image
