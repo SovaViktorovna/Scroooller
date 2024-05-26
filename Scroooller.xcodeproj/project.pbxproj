@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F6826772BF893480023683F /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6826762BF893480023683F /* SingleImageViewController.swift */; };
 		6F8EA1782BEA5E5D009B3BAB /* ImagesListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8EA1772BEA5E5D009B3BAB /* ImagesListCell.swift */; };
+		6FA1A5B62BF6F47500C62726 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FA1A5B52BF6F47500C62726 /* ProfileViewController.swift */; };
 		6FC684BE2BE48EBC00A60AC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */; };
 		6FC684C02BE48EBC00A60AC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */; };
 		6FC684C22BE48EBC00A60AC2 /* ImagesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FC684C12BE48EBC00A60AC2 /* ImagesListViewController.swift */; };
@@ -39,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6F6826762BF893480023683F /* SingleImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
 		6F8EA1772BEA5E5D009B3BAB /* ImagesListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesListCell.swift; sourceTree = "<group>"; };
+		6FA1A5B52BF6F47500C62726 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		6FC684BA2BE48EBC00A60AC2 /* Scroooller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scroooller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6F6826782BF8A2050023683F /* SingleImageView */ = {
+			isa = PBXGroup;
+			children = (
+				6F6826762BF893480023683F /* SingleImageViewController.swift */,
+			);
+			path = SingleImageView;
+			sourceTree = "<group>";
+		};
 		6F8EA1792BEA5EA6009B3BAB /* ImagesList  */ = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +101,14 @@
 				6FC684C12BE48EBC00A60AC2 /* ImagesListViewController.swift */,
 			);
 			path = "ImagesList ";
+			sourceTree = "<group>";
+		};
+		6FA1A5B72BF7202200C62726 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6FA1A5B52BF6F47500C62726 /* ProfileViewController.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		6FC684B12BE48EBC00A60AC2 = {
@@ -117,7 +137,9 @@
 			children = (
 				6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */,
 				6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */,
+				6FA1A5B72BF7202200C62726 /* Profile */,
 				6F8EA1792BEA5EA6009B3BAB /* ImagesList  */,
+				6F6826782BF8A2050023683F /* SingleImageView */,
 				6FC684C32BE48EBC00A60AC2 /* Main.storyboard */,
 				6FC684C92BE48EBE00A60AC2 /* Assets.xcassets */,
 				6FC684CB2BE48EBE00A60AC2 /* LaunchScreen.storyboard */,
@@ -276,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FA1A5B62BF6F47500C62726 /* ProfileViewController.swift in Sources */,
 				6FC684C22BE48EBC00A60AC2 /* ImagesListViewController.swift in Sources */,
 				6FC684BE2BE48EBC00A60AC2 /* AppDelegate.swift in Sources */,
+				6F6826772BF893480023683F /* SingleImageViewController.swift in Sources */,
 				6F8EA1782BEA5E5D009B3BAB /* ImagesListCell.swift in Sources */,
 				6FC684C02BE48EBC00A60AC2 /* SceneDelegate.swift in Sources */,
 				6FC684C82BE48EBC00A60AC2 /* Scroooller.xcdatamodeld in Sources */,
