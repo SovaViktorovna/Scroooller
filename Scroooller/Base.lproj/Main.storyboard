@@ -207,10 +207,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="K85-fV-Qli">
-                                <rect key="frame" x="-20" y="-20" width="454" height="936"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="QOf-qg-wot">
-                                        <rect key="frame" x="20" y="20" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="271" height="352"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
@@ -235,16 +235,30 @@
                                     <action selector="didTapChevronButton" destination="2XL-42-QpE" eventType="touchUpInside" id="QaZ-2b-prG"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3k-7j-lcr" userLabel="Sharing Button">
+                                <rect key="frame" x="182" y="830" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="A0Q-6l-5HZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="NNz-jO-8WV"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Sharing_Button"/>
+                                <connections>
+                                    <action selector="didTapShareButton:" destination="2XL-42-QpE" eventType="touchUpInside" id="wgZ-fB-UoF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VI1-cR-wuF"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="VI1-cR-wuF" firstAttribute="trailing" secondItem="K85-fV-Qli" secondAttribute="trailing" id="BaV-u8-Brv"/>
-                            <constraint firstItem="K85-fV-Qli" firstAttribute="top" secondItem="VI1-cR-wuF" secondAttribute="top" id="Bds-ds-4gu"/>
                             <constraint firstItem="6vK-gu-wfZ" firstAttribute="top" secondItem="VI1-cR-wuF" secondAttribute="top" constant="8" id="Gbc-Uq-faY"/>
+                            <constraint firstItem="f3k-7j-lcr" firstAttribute="centerX" secondItem="VI1-cR-wuF" secondAttribute="centerX" id="Htx-aL-RLr"/>
+                            <constraint firstItem="K85-fV-Qli" firstAttribute="top" secondItem="tkt-bC-xjN" secondAttribute="top" id="IXt-LD-bYV"/>
                             <constraint firstItem="6vK-gu-wfZ" firstAttribute="leading" secondItem="VI1-cR-wuF" secondAttribute="leading" constant="8" id="Ryq-Wb-PK4"/>
                             <constraint firstItem="K85-fV-Qli" firstAttribute="leading" secondItem="VI1-cR-wuF" secondAttribute="leading" id="VEQ-UF-eXk"/>
-                            <constraint firstItem="VI1-cR-wuF" firstAttribute="bottom" secondItem="K85-fV-Qli" secondAttribute="bottom" id="toh-0H-BqO"/>
+                            <constraint firstItem="VI1-cR-wuF" firstAttribute="bottom" secondItem="f3k-7j-lcr" secondAttribute="bottom" constant="16" id="eL9-LL-7Wm"/>
+                            <constraint firstAttribute="bottom" secondItem="K85-fV-Qli" secondAttribute="bottom" id="toh-0H-BqO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wjo-jH-Cgn"/>
@@ -285,6 +299,7 @@
         <image name="Exit_Image" width="24" height="24"/>
         <image name="Like_Image_On" width="42" height="42"/>
         <image name="Profile_Foto" width="70" height="70"/>
+        <image name="Sharing_Button" width="51" height="51"/>
         <image name="tab_editorial_active" width="30" height="30"/>
         <image name="tab_profile_active" width="30" height="30"/>
         <namedColor name="YP Black">

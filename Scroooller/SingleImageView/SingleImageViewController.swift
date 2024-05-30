@@ -20,6 +20,15 @@ final class SingleImageViewController: UIViewController {
     
     @IBOutlet private var ImageView: UIImageView!
     
+    
+    @IBAction func didTapShareButton(_ sender: UIButton) {
+        guard let image else { return }
+        let share = UIActivityViewController(
+            activityItems: [image],
+            applicationActivities: nil
+        )
+        present(share, animated: true, completion: nil)
+    }
     @IBAction func didTapChevronButton() {
         dismiss(animated: true, completion: nil)
     }
