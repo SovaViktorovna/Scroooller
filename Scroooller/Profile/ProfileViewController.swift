@@ -8,9 +8,9 @@
 import UIKit
 
 final class ProfileViewController: UIViewController {
+    private let imageView = UIImage()
     override func viewDidLoad(){
         super.viewDidLoad()
-        
         
         let imageView = UIImageView()
         imageView.image = UIImage(named: "Profile_Foto")
@@ -37,7 +37,6 @@ final class ProfileViewController: UIViewController {
         accountNameLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         accountNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8).isActive = true
         
-        
         let descriptionLabel = UILabel()
         descriptionLabel.text = "Hello, world!"
         descriptionLabel.textColor = .white
@@ -45,7 +44,6 @@ final class ProfileViewController: UIViewController {
         view.addSubview(descriptionLabel)
         descriptionLabel.leadingAnchor.constraint(equalTo: imageView.leadingAnchor).isActive = true
         descriptionLabel.topAnchor.constraint(equalTo: accountNameLabel.bottomAnchor, constant: 8).isActive = true
-        
         
         let button = UIButton()
         let buttonImage = UIImage(named: "Exit_Image")
