@@ -7,8 +7,14 @@
 
 import UIKit
 
+protocol AuthViewControllerDelegate: AnyObject {
+    func didAuthenticate(_ vc: AuthViewController)
+}
+
 final class AuthViewController: UIViewController {
     private let ShowWebViewSegueIdentifier = "ShowWebView"
+    
+    var delegate: AuthViewControllerDelegate?
 
     override func viewDidLoad() {
         configureBackButton()
@@ -34,7 +40,7 @@ final class AuthViewController: UIViewController {
                    // Обработка успешного декодирования
                    print("Decoded response: \(response)")
                    OAuth2TokenStorage.shared.token = response.access_token
-                   
+                   delegate?.didAuthenticate(self)
                } catch {
                    // Обработка ошибки декодирования
                    print("Failed to decode JSON: \(error)")
@@ -60,6 +66,7 @@ final class AuthViewController: UIViewController {
 extension AuthViewController: WebViewViewControllerDelegate {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String) {
         print("AuthViewController")
+        vc.dismiss(animated: true)
         OAuth2Service.shared.fetchOAuthToken(code: code, handler: handleCodeResult)
     }
     func webViewViewControllerDidCancel(_ vc: WebViewViewController) {
