@@ -159,10 +159,10 @@
 		6FC684BC2BE48EBC00A60AC2 /* Scroooller */ = {
 			isa = PBXGroup;
 			children = (
-				6F8CC9452C37FF7B00FEEF9C /* Start */,
 				6FC684BD2BE48EBC00A60AC2 /* AppDelegate.swift */,
 				6FC684BF2BE48EBC00A60AC2 /* SceneDelegate.swift */,
 				6F59ED8B2C12F54600F310DE /* Constants.swift */,
+				6F8CC9452C37FF7B00FEEF9C /* Start */,
 				6FDF12CA2C16E33700ED27CB /* Auth */,
 				6FA1A5B72BF7202200C62726 /* Profile */,
 				6F8EA1792BEA5EA6009B3BAB /* ImagesList  */,

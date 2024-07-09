@@ -38,7 +38,7 @@ final class OAuth2Service {
         return request
     }
     
-    func fetchOAuthToken(code: String, handler: @escaping (Result<Data, Error>) -> Void){
+    func fetchOAuthToken(code: String, handler: @escaping (Result<String, Error>) -> Void){
         // Получаем URLRequest
         guard let request = makeOAuthTokenRequest(code: code) else {
             print("Ошибка при создании запроса")
@@ -46,7 +46,25 @@ final class OAuth2Service {
         }
         
         // Создаем задачу dataTask
-        let task = URLSession.shared.data(for: request, completion: handler)
+        let task = URLSession.shared.data(for: request){result in
+            let decoder = JSONDecoder()
+            switch result {
+            case .success(let data):
+                do {
+                    let response = try decoder.decode(OAuthTokenResponseBody.self, from: data)
+                    // Обработка успешного декодирования
+                    print("Decoded response: \(response)")
+                    OAuth2TokenStorage.shared.token = response.access_token
+                    handler(.success(response.access_token))
+                } catch {
+                    // Обработка ошибки декодирования
+                    handler(.failure("Failed to decode JSON: \(error)" as! Error))
+                }
+            case .failure(let error):
+                // Обработка ошибки
+                handler(.failure("Request failed with error: \(error)" as! Error))
+            }
+        }
         
         // Запуск задачи
         task.resume()

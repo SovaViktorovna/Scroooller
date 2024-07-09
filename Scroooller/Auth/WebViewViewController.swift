@@ -25,15 +25,18 @@ final class WebViewViewController: UIViewController {
     weak var delegate: WebViewViewControllerDelegate?
     
     override func viewDidLoad(){
+        print("WebViewViewController viewDidLoad before super")
         super.viewDidLoad()
+        print("WebViewViewController viewDidLoad")
+        
         loadAuthView()
         webView.navigationDelegate = self
         
     }
     
-    func loadAuthView(){
+    func loadAuthView(){//это приватный экстеншн
         guard var urlComponents = URLComponents(string: UnsplashAuthorizeURLString) else {
-            print("error")
+            print("loadAuthView -> error")
             return
         }
         
@@ -44,7 +47,7 @@ final class WebViewViewController: UIViewController {
             URLQueryItem(name: "scope", value: Constants.accessScope)
         ]
         guard let url = urlComponents.url else {
-            print("error")
+            print("loadAuthView -> url error")
             return
         }
         
@@ -53,7 +56,10 @@ final class WebViewViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear before super")
         super.viewDidAppear(animated)
+        
+        print("viewDidAppear")
         
         webView.addObserver(
             self,
@@ -96,6 +102,8 @@ extension WebViewViewController: WKNavigationDelegate {
     func webView( _ webView: WKWebView,
                   decidePolicyFor navigationAction: WKNavigationAction,
                   decisionHandler:@escaping (WKNavigationActionPolicy) -> Void){
+        print("WebViewViewController webView")
+        
         if let code = code(from: navigationAction) {
             delegate?.webViewViewController(self, didAuthenticateWithCode: code)
             decisionHandler(.cancel)
