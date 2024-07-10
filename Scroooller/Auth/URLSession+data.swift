@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum NetworkError: Error { 
+enum NetworkError: Error {
     case httpStatusCode(Int)
     case urlRequestError(Error)
     case urlSessionError
@@ -19,6 +19,9 @@ extension URLSession {
         completion: @escaping (Result<Data, Error>) -> Void
     ) -> URLSessionTask {
         let fulfillCompletionOnTheMainThread: (Result<Data, Error>) -> Void = { result in
+            if case let .failure(error) = result {
+                print("Error: \(error)")
+            }
             DispatchQueue.main.async {
                 completion(result)
             }
@@ -37,7 +40,6 @@ extension URLSession {
                 fulfillCompletionOnTheMainThread(.failure(NetworkError.urlSessionError))
             }
         })
-        
         return task
     }
 }
